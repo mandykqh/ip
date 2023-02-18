@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+
 /**
  * Controller for MainWindow. Provides the layout for the other controls.
  */
@@ -25,6 +26,9 @@ public class MainWindow extends AnchorPane {
     private Image userImage = new Image(this.getClass().getResourceAsStream("/images/user.png"));
     private Image genieImage = new Image(this.getClass().getResourceAsStream("/images/genie.jpeg"));
 
+    /**
+     * Initializes first dialog from Genie when app launches.
+     */
     @FXML
     public void initialize() {
         this.genie = new Genie();
@@ -51,6 +55,12 @@ public class MainWindow extends AnchorPane {
         );
         userInput.clear();
     }
+
+    /**
+     * Shows greeting message from Genie when app launches.
+     * @param genie
+     * @return
+     */
     @FXML
     private String showGreeting(Genie genie) {
         String greeting = genie.showGreetingMessage();

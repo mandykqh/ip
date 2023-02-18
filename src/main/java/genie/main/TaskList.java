@@ -150,7 +150,7 @@ public class TaskList {
     }
 
     /**
-     * Delete task at index of task list.
+     * Deletes task at index of task list.
      * @param index of task list to be deleted
      */
     public void deleteTask(int index) {
@@ -158,14 +158,15 @@ public class TaskList {
         tasks.remove(index);
     }
 
-    /**
-     * Get task list.
-     * @return task list
-     */
     public ArrayList<Task> getTasks() {
         return this.tasks;
     }
 
+    /**
+     * Searches matching tasks on the task list based on the specified keyword.
+     * @param keyword
+     * @return tasks in an ArrayList
+     */
     //@@author mandykqh-reused
     //Reused from https://stackoverflow.com/questions/17134773/to-check-if-string-contains-particular-word
     //with minor modifications
